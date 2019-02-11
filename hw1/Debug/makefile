@@ -22,19 +22,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: test
+all: hw1
 
 # Tool invocations
-test: $(OBJS) $(USER_OBJS)
+hw1: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "test" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "hw1" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) test
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) hw1
 	-@echo ' '
 
 .PHONY: all clean dependents
