@@ -1,0 +1,5 @@
+Paid amount for 1000 stocks at $45.50 : $45500.00
+Buy commission amount                 : $910.00
+Sell price                            : $56.90
+Sell commission amount                : $1138.00
+Profit                                : $9352.00

@@ -1,0 +1,4 @@
+meal charge: $88.67
+tax        : $5.99
+tip        : $18.93
+total bill : $113.59
