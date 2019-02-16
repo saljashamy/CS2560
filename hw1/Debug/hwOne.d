@@ -1,1 +1,0 @@
-hwOne.o: ../hwOne.c
