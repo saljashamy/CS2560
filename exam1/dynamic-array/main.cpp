@@ -15,8 +15,6 @@ int main(){
     test->setFloat(0,2);
     cout << test->getFloat(2) << endl;
     cout << test->highestValue() << endl;
-    cout << test->lowestValue() << endl;
-
+    cout << test->lowestValue() << endl;    
     return 0;
-
 }
