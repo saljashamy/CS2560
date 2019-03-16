@@ -11,3 +11,4 @@ CMakeLists.txt
 /*/*/main
 /*/.vscode/*
 /*/*/.vscode/*
+/.vscode/*
