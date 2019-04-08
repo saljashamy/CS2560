@@ -1,12 +1,13 @@
 #include <iostream>
 #include <time.h>
 #include "Employee.h"
+#include "EmployeeException.h"
 
 
 Employee::Employee(std::string name, int idNumber, int day, int month, int year) {
-    Employee::name = name;
-    Employee::idNumber = idNumber;
-    Employee::date = new Date(day, month, year);
+    setName(name);
+    setIdNumber(idNumber);
+    setDate(day, month, year);
 }
 
 const std::string & Employee::getName() const {
@@ -22,6 +23,9 @@ int Employee::getIdNumber() const {
 }
 
 void Employee::setIdNumber(int idNumber) {
+    if(idNumber < 0 || idNumber > 9999){
+        throw new EmployeeException("InvalidEmployeeNumber");
+    }
     Employee::idNumber = idNumber;
 }
 

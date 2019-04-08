@@ -4,7 +4,6 @@
 #include <string>
 #include "Date.h"
 
-
 class Employee{
     private:
     std::string name;

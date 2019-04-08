@@ -1,12 +1,12 @@
 #include <iostream>
 #include <time.h>
 #include "ProductionWorker.h"
+#include "EmployeeException.h"
 
 
 ProductionWorker::ProductionWorker(std::string name, int idNumber, int day, int month, int year, int shift, double hourlyRate): Employee(name, idNumber, day, month, year){
     setShift(shift);
     setHourlyRate(hourlyRate);
-
 }
 
 int ProductionWorker::getShift() const {
@@ -14,7 +14,10 @@ int ProductionWorker::getShift() const {
 }
 
 void ProductionWorker::setShift(int shift) {
-   ProductionWorker::shift = shift;
+    if(shift != 1 && shift != 2){
+        throw new EmployeeException("InvalidShift");
+    }
+    ProductionWorker::shift = shift;
 }
 
 double ProductionWorker::getHourlyRate() const {
@@ -22,6 +25,9 @@ double ProductionWorker::getHourlyRate() const {
 }
 
 void ProductionWorker::setHourlyRate(double hourlyRate) {
+   if(hourlyRate < 0){
+       throw new EmployeeException("InvalidPayRate");
+   }
    ProductionWorker::hourlyRate = hourlyRate;
 }
 
@@ -32,6 +38,43 @@ void ProductionWorker::printProductionWorkerInfo(){
 }
 
 int main(){
-    ProductionWorker pw1("Richard", 2, 7, 4, 2019, 1, 20.25);
-    pw1.printProductionWorkerInfo();
+    try{
+        std::cout << "construct Employee with idNumber = -1" << std::endl;
+        Employee e1("John", -1, 7, 4, 2019);
+        e1.printEmployeeInfo();
+    } catch(EmployeeException *e){
+        std::cout << e->what() << std::endl;
+    }
+
+    try{
+        std::cout << "construct ProductionWorker with shift = 0" << std::endl;
+        ProductionWorker pw1("Richard", 2, 7, 4, 2019, 0, 20.25);
+        pw1.printProductionWorkerInfo();
+    } catch(EmployeeException *e){
+        std::cout << e->what() << std::endl;
+    }
+
+    try{
+        std::cout << "construct ProductionWorker with hourlyRate = -1" << std::endl;
+        ProductionWorker pw1("Richard", 2, 7, 4, 2019, 2, -1);
+        pw1.printProductionWorkerInfo();
+    } catch(EmployeeException *e){
+        std::cout << e->what() << std::endl;
+    }
+
+    try{
+        std::cout << "construct Employee with idNumber = 1" << std::endl;
+        Employee e1("John", 1, 7, 4, 2019);
+        e1.printEmployeeInfo();
+    } catch(EmployeeException *e){
+        std::cout << e->what() << std::endl;
+    }
+
+    try{
+        std::cout << "construct ProductionWorker with shift= 2 and hourlyRate = 20.25" << std::endl;
+        ProductionWorker pw1("Richard", 2, 7, 4, 2019, 2, 20.25);
+        pw1.printProductionWorkerInfo();
+    } catch(EmployeeException *e){
+        std::cout << e->what() << std::endl;
+    }
 }
