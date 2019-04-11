@@ -9,3 +9,5 @@ CMakeLists.txt
 /.idea/*
 /*/main
 /*/*/main
+/*/.vscode/*
+/*/*/.vscode/*
