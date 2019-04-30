@@ -57,30 +57,33 @@ include CMakeFiles/unit_testing.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/unit_testing.dir/flags.make
 
-CMakeFiles/unit_testing.dir/main.cpp.o: CMakeFiles/unit_testing.dir/flags.make
-CMakeFiles/unit_testing.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unit_testing.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_testing.dir/main.cpp.o -c "/home/sp/Classes/Spring 2019/unit-testing/main.cpp"
+CMakeFiles/unit_testing.dir/GMockTest.cpp.o: CMakeFiles/unit_testing.dir/flags.make
+CMakeFiles/unit_testing.dir/GMockTest.cpp.o: ../GMockTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/unit_testing.dir/GMockTest.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/unit_testing.dir/GMockTest.cpp.o -c "/home/sp/Classes/Spring 2019/unit-testing/GMockTest.cpp"
 
-CMakeFiles/unit_testing.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_testing.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/sp/Classes/Spring 2019/unit-testing/main.cpp" > CMakeFiles/unit_testing.dir/main.cpp.i
+CMakeFiles/unit_testing.dir/GMockTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/unit_testing.dir/GMockTest.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/sp/Classes/Spring 2019/unit-testing/GMockTest.cpp" > CMakeFiles/unit_testing.dir/GMockTest.cpp.i
 
-CMakeFiles/unit_testing.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_testing.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/sp/Classes/Spring 2019/unit-testing/main.cpp" -o CMakeFiles/unit_testing.dir/main.cpp.s
+CMakeFiles/unit_testing.dir/GMockTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/unit_testing.dir/GMockTest.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/sp/Classes/Spring 2019/unit-testing/GMockTest.cpp" -o CMakeFiles/unit_testing.dir/GMockTest.cpp.s
 
 # Object files for target unit_testing
 unit_testing_OBJECTS = \
-"CMakeFiles/unit_testing.dir/main.cpp.o"
+"CMakeFiles/unit_testing.dir/GMockTest.cpp.o"
 
 # External object files for target unit_testing
 unit_testing_EXTERNAL_OBJECTS =
 
-unit_testing: CMakeFiles/unit_testing.dir/main.cpp.o
+unit_testing: CMakeFiles/unit_testing.dir/GMockTest.cpp.o
 unit_testing: CMakeFiles/unit_testing.dir/build.make
 unit_testing: lib/libgtestd.a
 unit_testing: lib/libgtest_maind.a
+unit_testing: lib/libgmockd.a
+unit_testing: lib/libgmock_maind.a
+unit_testing: lib/libgmockd.a
 unit_testing: lib/libgtestd.a
 unit_testing: CMakeFiles/unit_testing.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable unit_testing"

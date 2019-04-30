@@ -45,10 +45,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest/googletest/include"/>
-					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest"/>
-					<Add directory="/googlemock/include"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest/googlemock/include"/>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googletest/include"/>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googletest"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googlemock/include"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googlemock"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -72,10 +73,11 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest/googletest/include"/>
-					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest"/>
-					<Add directory="/googlemock/include"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/./lib/googletest/googlemock/include"/>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googletest/include"/>
 					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googletest"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googlemock/include"/>
+					<Add directory="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googlemock"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -332,6 +334,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/sp/Classes/Spring 2019/unit-testing/GMockTest.cpp">
+			<Option target="unit_testing"/>
+		</Unit>
 		<Unit filename="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
@@ -343,9 +348,6 @@
 		</Unit>
 		<Unit filename="/home/sp/Classes/Spring 2019/unit-testing/lib/googletest/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
-		</Unit>
-		<Unit filename="/home/sp/Classes/Spring 2019/unit-testing/main.cpp">
-			<Option target="unit_testing"/>
 		</Unit>
 		<Unit filename="/home/sp/Classes/Spring 2019/unit-testing/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

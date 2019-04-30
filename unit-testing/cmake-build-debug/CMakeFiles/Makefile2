@@ -68,6 +68,8 @@ CMAKE_BINARY_DIR = "/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug"
 # Target rules for target CMakeFiles/unit_testing.dir
 
 # All Build rule for target.
+CMakeFiles/unit_testing.dir/all: lib/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+CMakeFiles/unit_testing.dir/all: lib/googletest/googlemock/CMakeFiles/gmock.dir/all
 CMakeFiles/unit_testing.dir/all: lib/googletest/googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/unit_testing.dir/all: lib/googletest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/depend
@@ -82,7 +84,7 @@ all: CMakeFiles/unit_testing.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/unit_testing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" 6
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/unit_testing.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/sp/Classes/Spring 2019/unit-testing/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/unit_testing.dir/rule

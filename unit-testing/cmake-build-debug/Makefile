@@ -221,32 +221,32 @@ gtest/fast:
 	$(MAKE) -f lib/googletest/googletest/CMakeFiles/gtest.dir/build.make lib/googletest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-main.o: main.cpp.o
+GMockTest.o: GMockTest.cpp.o
 
-.PHONY : main.o
+.PHONY : GMockTest.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/main.cpp.o
-.PHONY : main.cpp.o
+GMockTest.cpp.o:
+	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/GMockTest.cpp.o
+.PHONY : GMockTest.cpp.o
 
-main.i: main.cpp.i
+GMockTest.i: GMockTest.cpp.i
 
-.PHONY : main.i
+.PHONY : GMockTest.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/main.cpp.i
-.PHONY : main.cpp.i
+GMockTest.cpp.i:
+	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/GMockTest.cpp.i
+.PHONY : GMockTest.cpp.i
 
-main.s: main.cpp.s
+GMockTest.s: GMockTest.cpp.s
 
-.PHONY : main.s
+.PHONY : GMockTest.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/main.cpp.s
-.PHONY : main.cpp.s
+GMockTest.cpp.s:
+	$(MAKE) -f CMakeFiles/unit_testing.dir/build.make CMakeFiles/unit_testing.dir/GMockTest.cpp.s
+.PHONY : GMockTest.cpp.s
 
 # Help Target
 help:
@@ -265,9 +265,9 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... GMockTest.o"
+	@echo "... GMockTest.i"
+	@echo "... GMockTest.s"
 .PHONY : help
 
 
