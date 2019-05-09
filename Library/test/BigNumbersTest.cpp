@@ -1,0 +1,320 @@
+#include <iostream>
+#include <gtest/gtest.h>
+#include "BigNumbers.h"
+
+
+class BigNumbersTests : public ::testing::Test{
+public:
+protected:
+    BigNumbers test;
+};
+
+TEST_F(BigNumbersTests, CanInstantiateBigNumbers){
+    BigNumbers t("");
+}
+
+TEST_F(BigNumbersTests, CanAddBigNumbers){
+    std::string input = "-3265204613880110343826673439019131696394";
+    BigNumbers t(input);
+    std::string result = t.toString();
+    ASSERT_EQ(input, result);
+}
+
+
+TEST_F(BigNumbersTests, CanGetSize){
+    std::string input = "1896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    int size = 100;
+    BigNumbers t(input);
+    int result = t.getSize();
+    ASSERT_EQ(size, result);
+}
+
+TEST_F(BigNumbersTests, CanAddPositiveAndPositiveLHS){
+    std::string input1 = "1896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =                                         "415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "1896177612378397765818961776123783977658605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddPositiveAndPositiveRHS){
+    std::string input1 =                                         "415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "1896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "1896177612378397765818961776123783977658605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddPositiveAndPositive){
+    std::string input1 = "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "1896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "6055800167111789498760558001671117894987605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddPositiveAndPositiveOverflow){
+    std::string input1 = "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "11055800167111789498760558001671117894987605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+
+TEST_F(BigNumbersTests, CanAddPositiveAndPositiveCarryOverflow){
+    std::string input1 = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
+    std::string input2 = "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999";
+    std::string expected = "1999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999998";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddNegativeAndNegativeOverFlow){
+    std::string input1 = "-4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "-11055800167111789498760558001671117894987605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddNegativeAndPositive){
+    std::string input1 = "-4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "2736555057645006032877365550576450060328773655505764500603287736555057645006032877365550576450060329";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanAddPositiveAndNegative){
+    std::string input1 = "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 = "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "-2736555057645006032877365550576450060328773655505764500603287736555057645006032877365550576450060329";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers add = lhs + rhs;
+    std::string result = add.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanSubtractPositiveAndPositiveResultNegative){
+    std::string input1 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "-2736555057645006032877365550576450060328773655505764500603287736555057645006032877365550576450060329";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers sub = lhs - rhs;
+    std::string result = sub.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanSubtractPositiveAndPositiveResultPositive){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "2736555057645006032877365550576450060328773655505764500603287736555057645006032877365550576450060329";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers sub = lhs - rhs;
+    std::string result = sub.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanSubtractNegativeAndPositive){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "-11055800167111789498760558001671117894987605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers sub = lhs - rhs;
+    std::string result = sub.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanSubtractPositiveAndNegative){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "-4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "11055800167111789498760558001671117894987605580016711178949876055800167111789498760558001671117894987";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers sub = lhs - rhs;
+    std::string result = sub.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanMultiplyPositiveAndPositive){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "28685495937896652578898996272206813819750111375850346611137112327889786250840767235420210690355701629818327324969395306636969141966909223670257550106841244942741454087940133976487803326748118555035482";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers mul = lhs * rhs;
+    std::string result = mul.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanMultiplyPositiveAndNegative){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "-4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "-28685495937896652578898996272206813819750111375850346611137112327889786250840767235420210690355701629818327324969395306636969141966909223670257550106841244942741454087940133976487803326748118555035482";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers mul = lhs * rhs;
+    std::string result = mul.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanMultiplyNegativeAndPositive){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "-28685495937896652578898996272206813819750111375850346611137112327889786250840767235420210690355701629818327324969395306636969141966909223670257550106841244942741454087940133976487803326748118555035482";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers mul = lhs * rhs;
+    std::string result = mul.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanMultiplyNegativeAndNegative){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "-4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "28685495937896652578898996272206813819750111375850346611137112327889786250840767235420210690355701629818327324969395306636969141966909223670257550106841244942741454087940133976487803326748118555035482";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers mul = lhs * rhs;
+    std::string result = mul.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanDividePositiveAndPositiveResultZero){
+    std::string input1 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string input2 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "0";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs / rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+
+TEST_F(BigNumbersTests, CanDividePositiveAndPositiveResultOne){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159622554733391732941596225547333917329";
+    std::string expected = "1";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs / rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanDividePositiveAndNegative){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "-41596225547333917329415962255473339173294159622554733391732941596225547333917329415962";
+    std::string expected = "-165";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs / rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanDivideNegativeAndPositive){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159662255473339173294324";
+    std::string expected = "-1657";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs / rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanDivideNegativeAndNegative){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "-4159622554733391732941596225547333917329415962255473339173294159662255473339173294324";
+    std::string expected = "1657";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs / rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+
+TEST_F(BigNumbersTests, CanModPositiveAndPositiveResultZero){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string expected = "0";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs % rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanModPositiveAndZero){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "0";
+    std::string expected = "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs % rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+
+TEST_F(BigNumbersTests, CanModPositiveAndOne){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776123783977658";
+    std::string input2 =   "1";
+    std::string expected = "0";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs % rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanModPositiveAndNegative){
+    std::string input1 =   "-6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "4159622554733391732941596225547333917329415962255473339173294159662255473339173294324";
+    std::string expected = "-3683039185167664334736830391851676643347368303918516766433473617255059074755670266908";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs % rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
+
+TEST_F(BigNumbersTests, CanModNegativeAndPositive){
+    std::string input1 =   "6896177612378397765818961776123783977658189617761237839776581896177612378397765818961776";
+    std::string input2 =   "-4159622554733391732941596225547333917329415962255473339173294159662255473339173294324";
+    std::string expected = "-3683039185167664334736830391851676643347368303918516766433473617255059074755670266908";
+    BigNumbers lhs(input1);
+    BigNumbers rhs(input2);
+    BigNumbers div = lhs % rhs;
+    std::string result = div.toString();
+    ASSERT_EQ(expected, result);
+}
