@@ -10,7 +10,6 @@ public:
     BigNumbers();
     BigNumbers(std::string);
 
-    std::deque<char> const getBigNumbers();
     int const getSize() const;
 
     BigNumbers operator+(const BigNumbers &rhs);
