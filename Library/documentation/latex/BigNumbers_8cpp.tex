@@ -1,0 +1,77 @@
+\hypertarget{BigNumbers_8cpp}{}\section{Big\+Numbers.\+cpp File Reference}
+\label{BigNumbers_8cpp}\index{BigNumbers.cpp@{BigNumbers.cpp}}
+
+
+Stores integers in string format with arithmetic operations addition, subtraction, multiplication, division and modulo. See gtest\+:  
+
+
+{\ttfamily \#include \char`\"{}Big\+Numbers.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{BigNumbers_8cpp_a8819b73943c41bec8dbf150e46b94147}{to\+Digit}}(c)~(c -\/ \textquotesingle{}0\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{BigNumbers_8cpp_a15eeb03216484ee82af39f6934e0827f}{operator$>$}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&lhs, const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+bool \mbox{\hyperlink{BigNumbers_8cpp_a8ed2f27b8f4605f1afb4b11133d9883f}{operator==}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&lhs, const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores integers in string format with arithmetic operations addition, subtraction, multiplication, division and modulo. See gtest\+: 
+
+\begin{DoxyAuthor}{Author}
+Saif Aljashamy 
+\end{DoxyAuthor}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{BigNumbersTest_8cpp}{Big\+Numbers\+Test.\+cpp}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{BigNumbers_8cpp_a8819b73943c41bec8dbf150e46b94147}\label{BigNumbers_8cpp_a8819b73943c41bec8dbf150e46b94147}} 
+\index{BigNumbers.cpp@{BigNumbers.cpp}!toDigit@{toDigit}}
+\index{toDigit@{toDigit}!BigNumbers.cpp@{BigNumbers.cpp}}
+\subsubsection{\texorpdfstring{toDigit}{toDigit}}
+{\footnotesize\ttfamily \#define to\+Digit(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~(c -\/ \textquotesingle{}0\textquotesingle{})}
+
+Char digit to int 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{BigNumbers_8cpp_a8ed2f27b8f4605f1afb4b11133d9883f}\label{BigNumbers_8cpp_a8ed2f27b8f4605f1afb4b11133d9883f}} 
+\index{BigNumbers.cpp@{BigNumbers.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!BigNumbers.cpp@{BigNumbers.cpp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Compare two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with == operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{BigNumbers_8cpp_a15eeb03216484ee82af39f6934e0827f}\label{BigNumbers_8cpp_a15eeb03216484ee82af39f6934e0827f}} 
+\index{BigNumbers.cpp@{BigNumbers.cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!BigNumbers.cpp@{BigNumbers.cpp}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Compare two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with $>$ operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}

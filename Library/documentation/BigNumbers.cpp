@@ -161,7 +161,7 @@ BigNumbers BigNumbers::operator-(const BigNumbers & r)
 }
 
 /**
-	Multiply two BigNumbers with + operator
+	Multiply two BigNumbers with * operator
     @param this left operand
 	@param r right operand 
 	@returns Left operand multiply right operands

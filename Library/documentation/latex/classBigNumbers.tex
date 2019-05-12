@@ -1,0 +1,223 @@
+\hypertarget{classBigNumbers}{}\section{Big\+Numbers Class Reference}
+\label{classBigNumbers}\index{BigNumbers@{BigNumbers}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBigNumbers_af3dd82883f10f3473ac83280f26b0ad8}{Big\+Numbers}} ()
+\item 
+\mbox{\hyperlink{classBigNumbers_a257470bdef0c3db4f7648fe0250e32d6}{Big\+Numbers}} (std\+::string)
+\item 
+int const \mbox{\hyperlink{classBigNumbers_afe11b1c80e7f6354f99060e874436321}{get\+Size}} () const
+\item 
+\mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \mbox{\hyperlink{classBigNumbers_a428fe7dea7f42a6259fd01e825003b95}{operator+}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+\mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \mbox{\hyperlink{classBigNumbers_ada0ce248b387911c3dd09550c4c7685e}{operator-\/}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+\mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \mbox{\hyperlink{classBigNumbers_a0b859599ec7472fec77e8194d6dd78b5}{operator $\ast$}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+\mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \mbox{\hyperlink{classBigNumbers_ab6c457bb8159698ef5d90148249bdf7f}{operator/}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+\mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \mbox{\hyperlink{classBigNumbers_a65e9a67a5b527f9b0460599c6f5a59fd}{operator\%}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+std\+::string \mbox{\hyperlink{classBigNumbers_a5aacfc41443d41ad84d5a5ecafabcc4e}{to\+String}} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ char $>$ \mbox{\hyperlink{classBigNumbers_a6c8e1ed85850facebe4786c667166a8d}{number}}
+\item 
+bool \mbox{\hyperlink{classBigNumbers_afbdf195b03dfad2a7d9f4938de3c1d3f}{negative}} = false
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBigNumbers_a15eeb03216484ee82af39f6934e0827f}{operator$>$}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&lhs, const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\item 
+bool \mbox{\hyperlink{classBigNumbers_a8ed2f27b8f4605f1afb4b11133d9883f}{operator==}} (const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&lhs, const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBigNumbers_af3dd82883f10f3473ac83280f26b0ad8}\label{classBigNumbers_af3dd82883f10f3473ac83280f26b0ad8}} 
+\index{BigNumbers@{BigNumbers}!BigNumbers@{BigNumbers}}
+\index{BigNumbers@{BigNumbers}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{BigNumbers()}{BigNumbers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Big\+Numbers\+::\+Big\+Numbers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor \mbox{\Hypertarget{classBigNumbers_a257470bdef0c3db4f7648fe0250e32d6}\label{classBigNumbers_a257470bdef0c3db4f7648fe0250e32d6}} 
+\index{BigNumbers@{BigNumbers}!BigNumbers@{BigNumbers}}
+\index{BigNumbers@{BigNumbers}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{BigNumbers()}{BigNumbers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Big\+Numbers\+::\+Big\+Numbers (\begin{DoxyParamCaption}\item[{std\+::string}]{input }\end{DoxyParamCaption})}
+
+String integer constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classBigNumbers_afe11b1c80e7f6354f99060e874436321}\label{classBigNumbers_afe11b1c80e7f6354f99060e874436321}} 
+\index{BigNumbers@{BigNumbers}!getSize@{getSize}}
+\index{getSize@{getSize}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily int const Big\+Numbers\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+Number of digits 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_a0b859599ec7472fec77e8194d6dd78b5}\label{classBigNumbers_a0b859599ec7472fec77e8194d6dd78b5}} 
+\index{BigNumbers@{BigNumbers}!operator $\ast$@{operator $\ast$}}
+\index{operator $\ast$@{operator $\ast$}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator $\ast$()}{operator *()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} Big\+Numbers\+::operator $\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{r }\end{DoxyParamCaption})}
+
+Multiplication operator
+
+Multiply two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with $\ast$ operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left operand multiply right operands 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_a65e9a67a5b527f9b0460599c6f5a59fd}\label{classBigNumbers_a65e9a67a5b527f9b0460599c6f5a59fd}} 
+\index{BigNumbers@{BigNumbers}!operator\%@{operator\%}}
+\index{operator\%@{operator\%}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator\%()}{operator\%()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} Big\+Numbers\+::operator\% (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{r }\end{DoxyParamCaption})}
+
+Modulo operator
+
+Modulo two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with \% operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left operand modulo right operands 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_a428fe7dea7f42a6259fd01e825003b95}\label{classBigNumbers_a428fe7dea7f42a6259fd01e825003b95}} 
+\index{BigNumbers@{BigNumbers}!operator+@{operator+}}
+\index{operator+@{operator+}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} Big\+Numbers\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{r }\end{DoxyParamCaption})}
+
+Addition operator
+
+Adds two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with + operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left operand plus right operands 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_ada0ce248b387911c3dd09550c4c7685e}\label{classBigNumbers_ada0ce248b387911c3dd09550c4c7685e}} 
+\index{BigNumbers@{BigNumbers}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} Big\+Numbers\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{r }\end{DoxyParamCaption})}
+
+Substraction operator
+
+Substracts two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with -\/ operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left operand minus right operand 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_ab6c457bb8159698ef5d90148249bdf7f}\label{classBigNumbers_ab6c457bb8159698ef5d90148249bdf7f}} 
+\index{BigNumbers@{BigNumbers}!operator/@{operator/}}
+\index{operator/@{operator/}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} Big\+Numbers\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{r }\end{DoxyParamCaption})}
+
+Division operator
+
+Divide two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with / operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left operand divide right operands 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_a5aacfc41443d41ad84d5a5ecafabcc4e}\label{classBigNumbers_a5aacfc41443d41ad84d5a5ecafabcc4e}} 
+\index{BigNumbers@{BigNumbers}!toString@{toString}}
+\index{toString@{toString}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Big\+Numbers\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+String format of integer 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classBigNumbers_a8ed2f27b8f4605f1afb4b11133d9883f}\label{classBigNumbers_a8ed2f27b8f4605f1afb4b11133d9883f}} 
+\index{BigNumbers@{BigNumbers}!operator==@{operator==}}
+\index{operator==@{operator==}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+equality operator
+
+Compare two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with == operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBigNumbers_a15eeb03216484ee82af39f6934e0827f}\label{classBigNumbers_a15eeb03216484ee82af39f6934e0827f}} 
+\index{BigNumbers@{BigNumbers}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Greater than operator
+
+Compare two \mbox{\hyperlink{classBigNumbers}{Big\+Numbers}} with $>$ operator 
+\begin{DoxyParams}{Parameters}
+{\em this} & left operand \\
+\hline
+{\em r} & right operand \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True or false 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classBigNumbers_afbdf195b03dfad2a7d9f4938de3c1d3f}\label{classBigNumbers_afbdf195b03dfad2a7d9f4938de3c1d3f}} 
+\index{BigNumbers@{BigNumbers}!negative@{negative}}
+\index{negative@{negative}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{negative}{negative}}
+{\footnotesize\ttfamily bool Big\+Numbers\+::negative = false}
+
+True if integer is negative \mbox{\Hypertarget{classBigNumbers_a6c8e1ed85850facebe4786c667166a8d}\label{classBigNumbers_a6c8e1ed85850facebe4786c667166a8d}} 
+\index{BigNumbers@{BigNumbers}!number@{number}}
+\index{number@{number}!BigNumbers@{BigNumbers}}
+\subsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily std\+::deque$<$char$>$ Big\+Numbers\+::number}
+
+Store string digits in char deque 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{BigNumbers_8h}{Big\+Numbers.\+h}}\item 
+\mbox{\hyperlink{BigNumbers_8cpp}{Big\+Numbers.\+cpp}}\end{DoxyCompactItemize}
